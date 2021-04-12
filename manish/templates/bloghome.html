@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block blogactive %}active{% endblock blogactive %}
+{% block body %}
+<div class="container">
+  <h1>welcome to manish blog</h1>
+  {% for blog in blogs  %}
+  {{blog.title}}
+  <div class="media">
+    
+    <div class="media-body">
+      <h5 class="mt-0">{{blog.title}}</h5>
+      {{blog.content}}
+    </div>
+    <button class="btn btn-primarily">read more</button>
+  </div>
+  </div>
+  {% endfor %}
+{% endblock body %}
